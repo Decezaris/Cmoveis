@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 from sklearn import neighbors
-from math import sin, cos, sqrt, atan2, radians
+from math import sin, cos, sqrt, atan2, radians, asin
 #from sklearn.model_selection import GridSearchCV
 #import matplotlib.pyplot as plt
 #from math import sin, cos, sqrt, atan2, radians
@@ -27,5 +27,10 @@ def get_distance_in_meters(lat1, lat2, long1, long2):
 
 
     return distance * 1000
+
+def geodesicDistance(x, y):
+    		return 2*6372.8*asin(sqrt(sin(radians((y[0]-x[0])/2))**2 + cos(radians(x[0]))*cos(radians(y[0]))*sin(radians((y[1]-x[1])/2))**2))
+	# end
+
 
 
