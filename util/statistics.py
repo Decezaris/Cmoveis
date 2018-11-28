@@ -35,6 +35,7 @@ def show_stats_graphs(errors):
     plt.xlabel('Index')
     plt.ylabel('Error (m)')
     plt.show()
+    plt.savefig('errors.png')    
 
     # Histogram
     plt.title('Histogram of errors')
@@ -42,6 +43,7 @@ def show_stats_graphs(errors):
     plt.xlabel('Error (m)')
     plt.hist(errors, 10)
     plt.show()
+    plt.savefig('histogram.png')  
 
     # Cumulative
     plt.title('Cumulative error')
@@ -54,6 +56,7 @@ def show_stats_graphs(errors):
 
     plt.plot(X, Y)
     plt.show()
+    plt.savefig('cumulative.png') 
 	
 def show_box_plots(errors_list, names):
     all_errors = []
@@ -66,3 +69,4 @@ def show_box_plots(errors_list, names):
     plt.title('Boxplots')
     sns.boxplot(x="Approach", y="Error (m)", data=df,width=0.8)
     plt.show()
+    plt.savefig('cumulative.png') 
