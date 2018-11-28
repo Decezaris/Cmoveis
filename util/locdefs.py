@@ -32,5 +32,6 @@ def geodesicDistance(x, y):
     		return 2*6372.8*asin(sqrt(sin(radians((y[0]-x[0])/2))**2 + cos(radians(x[0]))*cos(radians(y[0]))*sin(radians((y[1]-x[1])/2))**2))
 	# end
 
-
+def euclidian_distance(p1, p2):
+    return sqrt(sum([(c1 - c2)**2 for c1, c2 in zip(p1, p2)]))
 
